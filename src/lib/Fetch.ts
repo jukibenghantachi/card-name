@@ -5,7 +5,7 @@ export class Fetch {
      * Fetch username github
      * @param username username github
      * @returns json
-     * @deprecated due github ratelimit issue
+     * @deprecated due github rate limit issues
      */
     public async fetchUser(username: string): Promise<string> {
         const res = await fetch(`https://api.github.com/users/${username}`)
