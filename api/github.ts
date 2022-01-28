@@ -32,10 +32,10 @@ export default async function render(req: VercelRequest, res: VercelResponse) {
         })
         res.setHeader('Content-type', 'image/svg+xml')
         return res.status(200).send(generate)
-    } catch (e: any) {
+    } catch (err: any) {
         return res.send({
             status: 'error',
-            message: e.message
+            message: err.message
         })
     }
 }
