@@ -2,8 +2,8 @@ import { Fetch } from './Fetch';
 import { CardData } from '../types';
 
 export class Card extends Fetch {
-	public async render({ name, bio, facebook, youtube, twitter, instagram, github, discord, telegram, linkedin, image }: CardData) {
-		let avatar = await this.fetchImage(image.toString() || 'https://avatars.githubusercontent.com/u/96633239?v=4');
+	public async render({ name, bio, facebook, youtube, twitter, instagram, github, discord, telegram, linkedin, image = 'https://avatars.githubusercontent.com/u/96633239?v=4' }: CardData) {
+		let avatar = await this.fetchImage(image.toString());
 
 		return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="450" viewBox="0 0 900 450">
     <foreignObject x="0" y="0" width="900" height="450">
