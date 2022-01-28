@@ -1,6 +1,6 @@
 {
 	"name": "card-name",
-	"description": "Create card name and display on your Github Readme",
+	"description": "Create card name and display on your github readme.",
 	"version": "0.1.0",
 	"main": "index.js",
 	"scripts": {
