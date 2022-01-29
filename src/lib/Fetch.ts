@@ -9,8 +9,8 @@ export class Fetch {
      */
     public async fetchUser(username: string): Promise<string> {
         const res = await fetch(`https://api.github.com/users/${username}`)
-        const stringify = JSON.stringify(await res.json())
-        return stringify
+        const json = JSON.stringify(await res.json())
+        return json
     }
 
     /**
