@@ -14,6 +14,7 @@ export default async function render(req: VercelRequest, res: VercelResponse) {
             discord,
             telegram,
             linkedin,
+            key,
             image
         }: VercelRequestQuery = req.query
         const card = new Card()
@@ -28,6 +29,7 @@ export default async function render(req: VercelRequest, res: VercelResponse) {
             discord,
             telegram,
             linkedin,
+            key,
             image
         })
         res.setHeader('Content-type', 'image/svg+xml')

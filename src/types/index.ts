@@ -9,5 +9,6 @@ export interface CardData {
     discord: string | string[]
     telegram: string | string[]
     linkedin: string | string[]
+    key: string | string[]
     image: string | string[]
 }

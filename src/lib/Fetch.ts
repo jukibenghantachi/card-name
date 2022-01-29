@@ -23,4 +23,15 @@ export class Fetch {
         const buffer = await res.arrayBuffer()
         return `data:image/png;base64,${Buffer.from(buffer).toString('base64')}`
     }
+
+    /**
+     * Fetch counter page using couterapi.xyz
+     * @param key key value
+     * @returns json
+     */
+    public async fetchCount(key: string): Promise<string> {
+        const res = await fetch(`https://api.countapi.xyz/hit/${key}`)
+        const json = JSON.stringify(await res.json())
+        return json
+    }
 }

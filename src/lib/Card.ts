@@ -13,9 +13,12 @@ export class Card extends Fetch {
         discord,
         telegram,
         linkedin,
+        key = 'key',
         image = 'https://avatars.githubusercontent.com/u/96633239?v=4'
     }: CardData) {
         let avatar = await this.fetchImage(image.toString())
+        let resKey = await this.fetchCount(key.toString())
+        let { value } = JSON.parse(resKey)
 
         return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="450" viewBox="0 0 900 450">
     <foreignObject x="0" y="0" width="900" height="450">
@@ -27,6 +30,9 @@ export class Card extends Fetch {
                 <h1 class="name">${name ? name : '<span />'}</h1>
                 <p class="about">${bio ? bio : '<span />'}</p>
                 <div class="path"></div>
+                <div class="views-wrap">
+                  <span class="views">Profile Views: ${key === 'key' ? '<span />' : value}</span>
+                </div>
               </div>
             <div class="content-right">
               <img src="${avatar}" alt="user-image" />
@@ -145,6 +151,18 @@ export class Card extends Fetch {
         width: 100%;
         border: none;
         border-bottom: 2px solid #666;
+      }
+      .views-wrap {
+        margin: 1rem 0;
+        display:flex;
+        justify-content: center;
+      }
+      .views {
+        background: #181717;
+        padding: 0.2rem 1rem;
+        border-radius: 99999999px;
+        font-size: 0.7rem;
+        color: white;"
       }
       .social {
         display: flex;
