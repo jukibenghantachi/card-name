@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch'
 export class Fetch {
     /**
      * Fetch username github
-     * @param username username github
+     * @param {username} username github
      * @returns json
      * @deprecated due github rate limit issues
      */
@@ -15,7 +15,7 @@ export class Fetch {
 
     /**
      * Fetch image and convert to base64
-     * @param url url image
+     * @param {url} url image
      * @returns base64 string
      */
     public async fetchImage(url: string): Promise<string> {
@@ -26,7 +26,7 @@ export class Fetch {
 
     /**
      * Fetch counter page using couterapi.xyz
-     * @param key key value
+     * @param {key} key value
      * @returns json
      */
     public async fetchCount(key: string): Promise<string> {
