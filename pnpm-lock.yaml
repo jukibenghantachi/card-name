@@ -6,6 +6,7 @@ specifiers:
   '@types/isomorphic-fetch': ^0.0.35
   '@types/node': ^17.0.12
   '@vercel/node': ^1.12.1
+  generate-changelog: ^1.8.0
   husky: ^7.0.4
   isomorphic-fetch: ^3.0.0
   typescript: ^4.5.5
@@ -20,6 +21,7 @@ devDependencies:
   '@types/isomorphic-fetch': 0.0.35
   '@types/node': 17.0.12
   '@vercel/node': 1.12.1
+  generate-changelog: 1.8.0
   husky: 7.0.4
   typescript: 4.5.5
   vercel: 23.1.2
@@ -357,6 +359,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /bluebird/3.7.2:
+    resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
+    dev: true
+
   /boxen/4.2.0:
     resolution: {integrity: sha512-eB4uT9RGzg2odpER62bBwSLvUeGC+WbRjjyyFhGsKnc8wp/m0+hQsMUvUe3H2V0D5vw0nBdO1hCJoZo5mKeuIQ==}
     engines: {node: '>=8'}
@@ -474,6 +480,10 @@ packages:
 
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    dev: true
+
+  /commander/2.20.3:
+    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
     dev: true
 
   /compare-func/2.0.0:
@@ -703,6 +713,15 @@ packages:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
 
+  /generate-changelog/1.8.0:
+    resolution: {integrity: sha512-msgpxeB75Ziyg3wGsZuPNl7c5RxChMKmYcAX5obnhUow90dBZW3nLic6nxGtst7Bpx453oS6zAIHcX7F3QVasw==}
+    hasBin: true
+    dependencies:
+      bluebird: 3.7.2
+      commander: 2.20.3
+      github-url-from-git: 1.5.0
+    dev: true
+
   /get-caller-file/2.0.5:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
     engines: {node: 6.* || 8.* || >= 10.*}
@@ -737,6 +756,10 @@ packages:
       meow: 8.1.2
       split2: 3.2.2
       through2: 4.0.2
+    dev: true
+
+  /github-url-from-git/1.5.0:
+    resolution: {integrity: sha1-+YX+3MCpqledyI16/waNVcxiUaA=}
     dev: true
 
   /global-dirs/0.1.1:
