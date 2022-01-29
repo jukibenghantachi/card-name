@@ -31,7 +31,9 @@ export class Card extends Fetch {
                 <p class="about">${bio ? bio : '<span />'}</p>
                 <div class="path"></div>
                 <div class="views-wrap">
-                  <span class="views">Profile Views: ${key === 'key' ? '<span />' : value}</span>
+                  <span class="views">
+                    ${key === 'key' ? '<span />' : `Profile views: ${value}`}
+                  </span>
                 </div>
               </div>
             <div class="content-right">
